@@ -1,0 +1,70 @@
+// Variables pour le header
+$white: #ffffff;
+$bleu: #1A3B62;
+
+// Header principal
+.site-header {
+    background-color: $white;
+    position: relative;
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 13px 162px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .logo {
+        width: 141.262px;
+        height: 97px;
+        flex-shrink: 0;
+        aspect-ratio: 141.26/97.00;
+    }
+
+    .main-navigation {
+        display: flex;
+        justify-content: right;
+        flex: 1;
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+            align-items: center;
+
+            .nav-item {
+                .nav-link {
+                    text-decoration: none;
+                    color: #000;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    
+                    &.cta {
+                        color: #FFF;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: var(--Title-Medium-Line-Height, 24px); /* 120% */
+                        border-radius: 16px;
+                        background: $bleu;
+                        display: flex;
+                        width: 167px;
+                        padding: 16px 24px;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

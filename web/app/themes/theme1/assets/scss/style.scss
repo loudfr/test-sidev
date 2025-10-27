@@ -1,0 +1,11 @@
+/*!
+Theme Name: Theme1
+Theme URI: http://example.com
+Description: Un thème personnalisé avec header et page d'accueil
+Author: Votre nom
+Version: 1.0.0
+*/
+
+// Import des fichiers partiels SASS
+@import 'header';
+@import 'index';
