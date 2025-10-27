@@ -42,7 +42,6 @@ Version: 1.0.0
 .site-header .main-navigation .nav-menu .nav-item .nav-link {
   text-decoration: none;
   color: #000;
-  font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -50,7 +49,6 @@ Version: 1.0.0
 }
 .site-header .main-navigation .nav-menu .nav-item .nav-link.cta {
   color: #FFF;
-  font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -66,10 +64,15 @@ Version: 1.0.0
 
 .home-page .hero-section {
   border-radius: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../imgs/background.svg") lightgray 50%/cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../../imgs/background.svg") lightgray 50%/cover no-repeat;
   color: #ffffff;
-  padding: 6rem 0;
+  width: 100%;
+  height: 800px;
+  flex-shrink: 0;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .home-page .hero-section .container {
   max-width: 1200px;
@@ -81,35 +84,31 @@ Version: 1.0.0
   margin: 0 auto;
 }
 .home-page .hero-section .hero-content .hero-title {
-  font-size: 3rem;
+  color: #FFF;
+  font-size: 64px;
+  font-style: normal;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
-@media (max-width: 768px) {
-  .home-page .hero-section .hero-content .hero-title {
-    font-size: 2rem;
-  }
+  line-height: normal;
+  margin-bottom: 48px;
 }
 .home-page .hero-section .hero-content .hero-description {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.95;
-  line-height: 1.6;
-}
-@media (max-width: 768px) {
-  .home-page .hero-section .hero-content .hero-description {
-    font-size: 1rem;
-  }
+  color: #FFF;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 34px;
 }
 .home-page .hero-section .hero-content .btn {
   display: inline-block;
   text-decoration: none;
-  padding: 1rem 2.5rem;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-size: 1.1rem;
+  border-radius: 16px;
+  padding: 16px 24px;
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Title-Medium-Line-Height, 24px); /* 120% */
 }
 .home-page .hero-section .hero-content .btn.btn-primary {
   background-color: #1A3B62;
@@ -118,114 +117,401 @@ Version: 1.0.0
 .home-page .hero-section .hero-content .btn.btn-secondary {
   background-color: #ffffff;
   color: #1A3B62;
+  margin-left: 50px;
 }
-.home-page .features-section {
-  padding: 5rem 0;
+.home-page .countdown-section {
   background-color: #ffffff;
-}
-.home-page .features-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-.home-page .features-section .section-title {
+  padding: 64px 162px;
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #000000;
+}
+.home-page .countdown-section .countdown-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #1A3B62;
+  padding: 64px;
+  border-radius: 16px;
+}
+.home-page .countdown-section .countdown-label {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+.home-page .countdown-section .countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.home-page .countdown-section .countdown-timer .countdown-item {
+  display: flex;
+  align-items: center;
+}
+.home-page .countdown-section .countdown-timer .countdown-item .countdown-value {
+  font-family: Montserrat, sans-serif;
+  font-size: 48px;
+  font-style: normal;
   font-weight: 700;
+  line-height: normal;
+  color: #ffffff;
 }
-@media (max-width: 768px) {
-  .home-page .features-section .section-title {
-    font-size: 2rem;
-  }
+.home-page .trail-section {
+  background: #fff;
+  padding: 64px 162px;
 }
-.home-page .features-section .features-grid {
+.home-page .trail-section .trail-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.home-page .trail-section .trail-text {
+  flex: 1;
+  min-width: 300px;
+}
+.home-page .trail-section .trail-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111;
+}
+.home-page .trail-section .trail-text p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.home-page .trail-section .trail-text .trail-icons {
+  display: flex;
+  gap: 32px 64px;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.home-page .trail-section .trail-text .trail-icons .icon-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+.home-page .trail-section .trail-text .trail-icons .icon-item svg {
+  height: 48px;
+}
+.home-page .trail-section .trail-image {
+  flex: 1;
+  min-width: 280px;
+}
+.home-page .trail-section .trail-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.home-page .parcours-section {
+  background: #f7f7f7;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.home-page .parcours-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+.home-page .parcours-section .subtitle {
+  color: #555;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+.home-page .parcours-section .parcours-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  justify-items: center;
 }
-.home-page .features-section .features-grid .feature-card {
-  background-color: #f8f9fa;
-  padding: 2.5rem 2rem;
-  border-radius: 10px;
+.home-page .parcours-section .parcours-cards .parcours-loader {
+  grid-column: 1/-1;
   text-align: center;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  padding: 3rem;
 }
-.home-page .features-section .features-grid .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  border-color: #1A3B62;
+.home-page .parcours-section .parcours-cards .parcours-loader .spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1A3B62;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
 }
-.home-page .features-section .features-grid .feature-card .feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+.home-page .parcours-section .parcours-cards .parcours-loader p {
+  color: #666;
+  font-size: 1.1rem;
 }
-.home-page .features-section .features-grid .feature-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #000000;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.home-page .parcours-section .parcours-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.home-page .parcours-section .parcours-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.home-page .parcours-section .parcours-card .card-image {
+  position: relative;
+}
+.home-page .parcours-section .parcours-card .card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.home-page .parcours-section .parcours-card .card-image .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #1b2a57;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 9px;
+}
+.home-page .parcours-section .parcours-card .card-body {
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.home-page .parcours-section .parcours-card .card-body h3 {
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.home-page .parcours-section .parcours-card .card-body .distance {
+  color: #333;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+.home-page .parcours-section .parcours-card .card-body .distance svg {
+  flex-shrink: 0;
+}
+.home-page .parcours-section .parcours-card .card-body .description {
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.home-page .parcours-section .parcours-card .card-body .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-page .parcours-section .parcours-card .card-body .card-footer .price {
+  font-weight: 700;
+  color: #111;
+}
+.home-page .parcours-section .parcours-card .card-body .card-footer .cta {
+  color: #1b2a57;
   font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
 }
-.home-page .features-section .features-grid .feature-card p {
-  color: #333333;
-  line-height: 1.6;
-  font-size: 1rem;
+.home-page .parcours-section .parcours-card .card-body .card-footer .cta:hover {
+  color: #0f1840;
+  text-decoration: underline;
 }
-.home-page .cta-section {
-  background-color: #f8f9fa;
-  padding: 5rem 0;
+.home-page .programme-section {
+  background: #fff;
+  padding: 5rem 2rem;
   text-align: center;
 }
-.home-page .cta-section .container {
+.home-page .programme-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.home-page .programme-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+.home-page .programme-section .subtitle {
+  color: #555;
+  margin-bottom: 3rem;
+}
+.home-page .programme-section .jour {
+  margin-bottom: 4rem;
+}
+.home-page .programme-section .jour .jour-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.home-page .programme-section .jour .jour-header .jour-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1b2a57;
+  color: #fff;
+  font-weight: 700;
+}
+.home-page .programme-section .jour .jour-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111;
+}
+.home-page .programme-section .jour .timeline {
+  position: relative;
+  padding-left: 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.home-page .programme-section .jour .timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  background: #1A3B62;
+  height: 340px;
+}
+.home-page .programme-section .jour .timeline .event {
+  position: relative;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.home-page .programme-section .jour .timeline .event .event-icon {
+  position: absolute;
+  left: -55px;
+  top: 10px;
+  background: #1A3B62;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.home-page .programme-section .jour .timeline .event .event-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.home-page .programme-section .jour .timeline .event .event-content {
+  background: #1b2a57;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  width: 100%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  min-height: 100px;
+}
+.home-page .programme-section .jour .timeline .event .event-content h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.home-page .programme-section .jour .timeline .event .event-content .horaire {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  opacity: 0.9;
+}
+.home-page .programme-section .jour .timeline .event .event-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #e4e8f2;
+}
+.home-page .programme-section .jour .timeline .event:last-child {
+  margin-bottom: 0;
+}
+.home-page .rejoindre-aventure {
+  border-radius: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../../imgs/bg-2.png") lightgray 50%/cover no-repeat;
+  color: #ffffff;
+  width: 100%;
+  height: 600px;
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-page .rejoindre-aventure .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-.home-page .cta-section .cta-content {
-  max-width: 700px;
+.home-page .rejoindre-aventure .aventure-content {
+  max-width: 800px;
   margin: 0 auto;
 }
-.home-page .cta-section .cta-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #000000;
+.home-page .rejoindre-aventure .aventure-content .aventure-title {
+  color: #FFF;
+  font-size: 48px;
+  font-style: normal;
   font-weight: 700;
+  line-height: normal;
+  margin-bottom: 48px;
 }
-@media (max-width: 768px) {
-  .home-page .cta-section .cta-content h2 {
-    font-size: 2rem;
-  }
+.home-page .rejoindre-aventure .aventure-content .aventure-description {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 34px;
 }
-.home-page .cta-section .cta-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: rgb(38.25, 38.25, 38.25);
-  line-height: 1.6;
-}
-@media (max-width: 768px) {
-  .home-page .cta-section .cta-content p {
-    font-size: 1rem;
-  }
-}
-.home-page .cta-section .cta-content .btn {
+.home-page .rejoindre-aventure .aventure-content .btn {
   display: inline-block;
   text-decoration: none;
-  padding: 1rem 2.5rem;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-size: 1.1rem;
+  border-radius: 16px;
+  padding: 16px 24px;
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Title-Medium-Line-Height, 24px); /* 120% */
 }
-.home-page .cta-section .cta-content .btn.btn-secondary {
-  background-color: #28a745;
+.home-page .rejoindre-aventure .aventure-content .btn.btn-primary {
+  background-color: #1A3B62;
   color: #ffffff;
-}
-.home-page .cta-section .cta-content .btn.btn-secondary:hover {
-  background-color: rgb(30.1449275362, 125.8550724638, 52);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 * {
