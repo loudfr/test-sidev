@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
 <main class="home-page">
-    <section class="hero-section">
+    <section class="hero-section" id="hero-section">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title"><?= get_field('hero_titre') ?></h1>
                 <p class="hero-description"><?= get_field('hero_description') ?></p>
-                <a href="<?php echo home_url('/inscription'); ?>" class="btn btn-primary">S'inscrire maintenant</a>
-                <a href="<?php echo home_url('/parcours'); ?>" class="btn btn-secondary">Découvrir les parcours</a>
+                <a href="<?php echo home_url('#'); ?>" class="btn btn-primary">S'inscrire maintenant</a>
+                <a href="<?php echo home_url('#'); ?>" class="btn btn-secondary">Découvrir les parcours</a>
             </div>
         </div>
     </section>
@@ -66,7 +66,7 @@
         </div>
     </section>
 
-    <section class="parcours-section">
+    <section class="parcours-section" id="parcours-section">
         <div class="container">
             <h2>Nos Parcours</h2>
             <p class="subtitle">
@@ -77,71 +77,76 @@
 
             <!-- Carte 1 -->
             <div class="parcours-card">
+
                 <div class="card-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/parcours.svg" alt="Trail des Callunes 45 km">
-                <span class="badge">Difficile</span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/imgs/parcours.svg" alt="Trail des Callunes 45 km">
+                    <span class="badge">Difficile</span>
                 </div>
+
                 <div class="card-body">
-                <h3>Trail des Callunes</h3>
-                <p class="distance">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M12 25.3334C12 27.5426 10.2091 29.3334 8 29.3334C5.79086 29.3334 4 27.5426 4 25.3334C4 23.1243 5.79086 21.3334 8 21.3334C10.2091 21.3334 12 23.1243 12 25.3334ZM12 25.3334H23.3333C24.571 25.3334 25.758 24.8417 26.6332 23.9666C27.5083 23.0914 28 21.9044 28 20.6667C28 19.4291 27.5083 18.2421 26.6332 17.3669C25.758 16.4917 24.571 16.0001 23.3333 16.0001H8.66667C7.42899 16.0001 6.24201 15.5084 5.36684 14.6332C4.49167 13.7581 4 12.5711 4 11.3334C4 10.0957 4.49167 8.90875 5.36684 8.03358C6.24201 7.15841 7.42899 6.66675 8.66667 6.66675H20M20 6.66675C20 8.87589 21.7909 10.6667 24 10.6667C26.2091 10.6667 28 8.87589 28 6.66675C28 4.45761 26.2091 2.66675 24 2.66675C21.7909 2.66675 20 4.45761 20 6.66675Z" stroke="#1A3B62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    45 km - D+ 2500m</p>
-                <p class="description">
-                    Parcours technique à travers les plus belles landes de callunes de la région,
-                    avec des passages techniques et des dénivelés importants.
-                </p>
-                <div class="card-footer">
-                    <span class="price">45€</span>
-                    <a href="#" class="cta">S'inscrire <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                    <h3>Trail des Callunes</h3>
+                    <p class="distance">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M12 25.3334C12 27.5426 10.2091 29.3334 8 29.3334C5.79086 29.3334 4 27.5426 4 25.3334C4 23.1243 5.79086 21.3334 8 21.3334C10.2091 21.3334 12 23.1243 12 25.3334ZM12 25.3334H23.3333C24.571 25.3334 25.758 24.8417 26.6332 23.9666C27.5083 23.0914 28 21.9044 28 20.6667C28 19.4291 27.5083 18.2421 26.6332 17.3669C25.758 16.4917 24.571 16.0001 23.3333 16.0001H8.66667C7.42899 16.0001 6.24201 15.5084 5.36684 14.6332C4.49167 13.7581 4 12.5711 4 11.3334C4 10.0957 4.49167 8.90875 5.36684 8.03358C6.24201 7.15841 7.42899 6.66675 8.66667 6.66675H20M20 6.66675C20 8.87589 21.7909 10.6667 24 10.6667C26.2091 10.6667 28 8.87589 28 6.66675C28 4.45761 26.2091 2.66675 24 2.66675C21.7909 2.66675 20 4.45761 20 6.66675Z" stroke="#1A3B62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        45 km - D+ 2500m</p>
+                    <p class="description">
+                        Parcours technique à travers les plus belles landes de callunes de la région,
+                        avec des passages techniques et des dénivelés importants.
+                    </p>
+                    <div class="card-footer">
+                        <span class="price">45€</span>
+                        <a href="#" class="cta">S'inscrire <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
 
             <!-- Carte 2 -->
             <div class="parcours-card">
                 <div class="card-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/parcours.svg" alt="Trail des Callunes 25 km">
-                <span class="badge">Difficile</span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/imgs/parcours.svg" alt="Trail des Callunes 25 km">
+                    <span class="badge">Difficile</span>
                 </div>
+
                 <div class="card-body">
-                <h3>Trail des Callunes</h3>
-                <p class="distance">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M12 25.3334C12 27.5426 10.2091 29.3334 8 29.3334C5.79086 29.3334 4 27.5426 4 25.3334C4 23.1243 5.79086 21.3334 8 21.3334C10.2091 21.3334 12 23.1243 12 25.3334ZM12 25.3334H23.3333C24.571 25.3334 25.758 24.8417 26.6332 23.9666C27.5083 23.0914 28 21.9044 28 20.6667C28 19.4291 27.5083 18.2421 26.6332 17.3669C25.758 16.4917 24.571 16.0001 23.3333 16.0001H8.66667C7.42899 16.0001 6.24201 15.5084 5.36684 14.6332C4.49167 13.7581 4 12.5711 4 11.3334C4 10.0957 4.49167 8.90875 5.36684 8.03358C6.24201 7.15841 7.42899 6.66675 8.66667 6.66675H20M20 6.66675C20 8.87589 21.7909 10.6667 24 10.6667C26.2091 10.6667 28 8.87589 28 6.66675C28 4.45761 26.2091 2.66675 24 2.66675C21.7909 2.66675 20 4.45761 20 6.66675Z" stroke="#1A3B62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    25 km - D+ 1100m</p>
-                <p class="description">
-                    Parcours accessible aux coureurs réguliers, avec des paysages variés de landes et des passages techniques modérés.
-                </p>
-                <div class="card-footer">
-                    <span class="price">50€</span>
-                    <a href="#" class="cta">S'inscrire <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                    <h3>Trail des Callunes</h3>
+                    <p class="distance">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M12 25.3334C12 27.5426 10.2091 29.3334 8 29.3334C5.79086 29.3334 4 27.5426 4 25.3334C4 23.1243 5.79086 21.3334 8 21.3334C10.2091 21.3334 12 23.1243 12 25.3334ZM12 25.3334H23.3333C24.571 25.3334 25.758 24.8417 26.6332 23.9666C27.5083 23.0914 28 21.9044 28 20.6667C28 19.4291 27.5083 18.2421 26.6332 17.3669C25.758 16.4917 24.571 16.0001 23.3333 16.0001H8.66667C7.42899 16.0001 6.24201 15.5084 5.36684 14.6332C4.49167 13.7581 4 12.5711 4 11.3334C4 10.0957 4.49167 8.90875 5.36684 8.03358C6.24201 7.15841 7.42899 6.66675 8.66667 6.66675H20M20 6.66675C20 8.87589 21.7909 10.6667 24 10.6667C26.2091 10.6667 28 8.87589 28 6.66675C28 4.45761 26.2091 2.66675 24 2.66675C21.7909 2.66675 20 4.45761 20 6.66675Z" stroke="#1A3B62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        25 km - D+ 1100m</p>
+                    <p class="description">
+                        Parcours accessible aux coureurs réguliers, avec des paysages variés de landes et des passages techniques modérés.
+                    </p>
+                    <div class="card-footer">
+                        <span class="price">50€</span>
+                        <a href="#" class="cta">S'inscrire <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
 
             <!-- Carte 3 -->
             <div class="parcours-card">
+
                 <div class="card-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/imgs/parcours.svg" alt="Trail initiation 12 km">
-                <span class="badge">Difficile</span>
+                    <img src="<?php echo get_template_directory_uri(); ?>/imgs/parcours.svg" alt="Trail initiation 12 km">
+                    <span class="badge">Difficile</span>
                 </div>
+
                 <div class="card-body">
-                <h3>Trail initiation</h3>
-                <p class="distance">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M12 25.3334C12 27.5426 10.2091 29.3334 8 29.3334C5.79086 29.3334 4 27.5426 4 25.3334C4 23.1243 5.79086 21.3334 8 21.3334C10.2091 21.3334 12 23.1243 12 25.3334ZM12 25.3334H23.3333C24.571 25.3334 25.758 24.8417 26.6332 23.9666C27.5083 23.0914 28 21.9044 28 20.6667C28 19.4291 27.5083 18.2421 26.6332 17.3669C25.758 16.4917 24.571 16.0001 23.3333 16.0001H8.66667C7.42899 16.0001 6.24201 15.5084 5.36684 14.6332C4.49167 13.7581 4 12.5711 4 11.3334C4 10.0957 4.49167 8.90875 5.36684 8.03358C6.24201 7.15841 7.42899 6.66675 8.66667 6.66675H20M20 6.66675C20 8.87589 21.7909 10.6667 24 10.6667C26.2091 10.6667 28 8.87589 28 6.66675C28 4.45761 26.2091 2.66675 24 2.66675C21.7909 2.66675 20 4.45761 20 6.66675Z" stroke="#1A3B62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    12 km - D+ 400m</p>
-                <p class="description">
-                    Idéal pour découvrir le trail running, ce parcours offre une première expérience dans les landes avec des paysages magnifiques.
-                </p>
-                <div class="card-footer">
-                    <span class="price">12€</span>
-                    <a href="#" class="cta">S'inscrire <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                    <h3>Trail initiation</h3>
+                    <p class="distance">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M12 25.3334C12 27.5426 10.2091 29.3334 8 29.3334C5.79086 29.3334 4 27.5426 4 25.3334C4 23.1243 5.79086 21.3334 8 21.3334C10.2091 21.3334 12 23.1243 12 25.3334ZM12 25.3334H23.3333C24.571 25.3334 25.758 24.8417 26.6332 23.9666C27.5083 23.0914 28 21.9044 28 20.6667C28 19.4291 27.5083 18.2421 26.6332 17.3669C25.758 16.4917 24.571 16.0001 23.3333 16.0001H8.66667C7.42899 16.0001 6.24201 15.5084 5.36684 14.6332C4.49167 13.7581 4 12.5711 4 11.3334C4 10.0957 4.49167 8.90875 5.36684 8.03358C6.24201 7.15841 7.42899 6.66675 8.66667 6.66675H20M20 6.66675C20 8.87589 21.7909 10.6667 24 10.6667C26.2091 10.6667 28 8.87589 28 6.66675C28 4.45761 26.2091 2.66675 24 2.66675C21.7909 2.66675 20 4.45761 20 6.66675Z" stroke="#1A3B62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        12 km - D+ 400m</p>
+                    <p class="description">
+                        Idéal pour découvrir le trail running, ce parcours offre une première expérience dans les landes avec des paysages magnifiques.
+                    </p>
+                    <div class="card-footer">
+                        <span class="price">12€</span>
+                        <a href="#" class="cta">S'inscrire <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
 
@@ -149,7 +154,7 @@
         </div>
     </section>
 
-    <section class="programme-section">
+    <section class="programme-section" id="programme">
         <div class="container">
             <h2>Programme du Weekend</h2>
             <p class="subtitle">Découvrez le déroulement du weekend Trail des Callunes.</p>
@@ -273,12 +278,139 @@
             <div class="aventure-content">
                 <h1 class="aventure-title">Rejoindre l'aventure</h1>
                 <p class="aventure-description">Plus de 1200 coureurs nous font confiance chaque année pour vivre une expérience trail inoubliable à travers les landes de callunes.</p>
-                <a href="<?php echo home_url('/inscription'); ?>" class="btn btn-primary">Je m'inscris maintenant</a>
+                <a href="<?php echo home_url('#'); ?>" class="btn btn-primary">Je m'inscris maintenant</a>
             </div>
         </div>
     </section>
 
-    
+
+        
+    <section class="galerie-section" id="galerie">
+        <div class="container">
+            <h2><?= get_field('galerie_titre') ?></h2>
+            <p class="subtitle"><?= get_field('galerie_description') ?></p>
+
+            <div class="galerie-grid">
+                <?php 
+                $galerie = get_field('galerie');
+                
+                if ($galerie && is_array($galerie)):
+                    for ($i = 1; $i <= 8; $i++): 
+                        $img_key = 'img' . $i;
+                        
+                        if (isset($galerie[$img_key]) && !empty($galerie[$img_key])): 
+                            $image = $galerie[$img_key];
+                            
+                            // L'image est une URL (string)
+                            if (is_string($image)):
+                ?>
+                                <div class="galerie-item">
+                                    <img src="<?= esc_url($image) ?>" alt="Photo Trail des Callunes <?= $i ?>">
+                                </div>
+                <?php 
+                            endif;
+                        endif;
+                    endfor;
+                endif;
+                ?>
+            </div>
+
+            <div class="galerie-cta">
+                <a href="<?php echo home_url('/galerie'); ?>" class="btn-galerie">
+                    Voir plus de photos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="inscription-section" id="inscription">
+        <div class="inscription-container">
+            <div class="inscription-left">
+                <h1>Inscription</h1>
+                
+                <p class="inscription-description">
+                    Réservez dès maintenant votre place pour l'édition 2023 du Trail des Callunes. Les places sont limitées pour chaque parcours.
+                </p>
+                
+                <div class="inscription-notice">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="notice-text">
+                        <strong>Important:</strong> Un certificat médical de non contre-indication à la pratique du trail en compétition est obligatoire pour participer.
+                    </div>
+                </div>
+                
+                <ul class="inscription-features">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.801 9.99999C22.2577 12.2413 21.9322 14.5714 20.8789 16.6018C19.8255 18.6322 18.1079 20.24 16.0125 21.1573C13.9171 22.0746 11.5706 22.2458 9.36431 21.6424C7.15798 21.0389 5.2252 19.6974 3.88828 17.8414C2.55137 15.9854 1.89113 13.7272 2.01767 11.4434C2.14421 9.15952 3.04989 6.98808 4.58366 5.29116C6.11743 3.59424 8.18659 2.47442 10.4461 2.11844C12.7056 1.76247 15.0188 2.19185 17 3.33499M9.00001 11L12 14L22 3.99999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Inscription en ligne sécurisée</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.801 9.99999C22.2577 12.2413 21.9322 14.5714 20.8789 16.6018C19.8255 18.6322 18.1079 20.24 16.0125 21.1573C13.9171 22.0746 11.5706 22.2458 9.36431 21.6424C7.15798 21.0389 5.2252 19.6974 3.88828 17.8414C2.55137 15.9854 1.89113 13.7272 2.01767 11.4434C2.14421 9.15952 3.04989 6.98808 4.58366 5.29116C6.11743 3.59424 8.18659 2.47442 10.4461 2.11844C12.7056 1.76247 15.0188 2.19185 17 3.33499M9.00001 11L12 14L22 3.99999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Confirmation immédiate par email</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.801 9.99999C22.2577 12.2413 21.9322 14.5714 20.8789 16.6018C19.8255 18.6322 18.1079 20.24 16.0125 21.1573C13.9171 22.0746 11.5706 22.2458 9.36431 21.6424C7.15798 21.0389 5.2252 19.6974 3.88828 17.8414C2.55137 15.9854 1.89113 13.7272 2.01767 11.4434C2.14421 9.15952 3.04989 6.98808 4.58366 5.29116C6.11743 3.59424 8.18659 2.47442 10.4461 2.11844C12.7056 1.76247 15.0188 2.19185 17 3.33499M9.00001 11L12 14L22 3.99999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Dossard et goodies offerts</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.801 9.99999C22.2577 12.2413 21.9322 14.5714 20.8789 16.6018C19.8255 18.6322 18.1079 20.24 16.0125 21.1573C13.9171 22.0746 11.5706 22.2458 9.36431 21.6424C7.15798 21.0389 5.2252 19.6974 3.88828 17.8414C2.55137 15.9854 1.89113 13.7272 2.01767 11.4434C2.14421 9.15952 3.04989 6.98808 4.58366 5.29116C6.11743 3.59424 8.18659 2.47442 10.4461 2.11844C12.7056 1.76247 15.0188 2.19185 17 3.33499M9.00001 11L12 14L22 3.99999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Repas des coureurs inclus</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="inscription-right">
+                <?php echo do_shortcode('[contact-form-7 id="2a2993e" title="Formulaire de contact 1"]'); ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="partenaires-section">
+        <h2><?= get_field('partenaires_titre') ?: 'Nos Partenaires' ?></h2>
+        
+        <div class="partenaires-carousel">
+            <div class="partenaires-track">
+                <?php 
+                $partenaires = get_field('partenaires');
+                
+                if ($partenaires && is_array($partenaires)):
+                    // Dupliquer les logos pour un défilement infini
+                    for ($loop = 0; $loop < 2; $loop++):
+                        for ($i = 1; $i <= 10; $i++): 
+                            $logo_key = 'logo' . $i;
+                            
+                            if (isset($partenaires[$logo_key]) && !empty($partenaires[$logo_key])): 
+                                $logo = $partenaires[$logo_key];
+                                
+                                if (is_string($logo)):
+                ?>
+                                    <div class="partenaire-item">
+                                        <img src="<?= esc_url($logo) ?>" alt="Partenaire <?= $i ?>">
+                                    </div>
+                <?php 
+                                endif;
+                            endif;
+                        endfor;
+                    endfor;
+                endif;
+                ?>
+            </div>
+        </div>
+    </section>
+   
 </main>
 
 <?php get_footer(); ?>

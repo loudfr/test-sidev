@@ -14,6 +14,12 @@ function theme1_enqueue_styles() {
     // Enqueue le fichier JavaScript pour les parcours AJAX
     wp_enqueue_script('theme1-parcours', get_template_directory_uri() . '/assets/js/parcours.js', array(), '1.0.0', true);
     
+    // Enqueue le fichier JavaScript pour les partenaires
+    wp_enqueue_script('theme1-partenaires', get_template_directory_uri() . '/assets/js/partenaires.js', array(), '1.0.0', true);
+    
+    // Enqueue le script de scroll fluide pour la navigation one-page
+    wp_enqueue_script('theme1-smooth-scroll', get_template_directory_uri() . '/assets/js/smooth-scroll.js', array(), '1.0.0', true);
+
     // Passer l'URL du thème au JavaScript
     wp_localize_script('theme1-parcours', 'themeData', array(
         'themeUrl' => get_template_directory_uri(),

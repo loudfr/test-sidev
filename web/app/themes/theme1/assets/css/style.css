@@ -46,9 +46,14 @@ Version: 1.0.0
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  transition: all 0.3s ease;
+}
+.site-header .main-navigation .nav-menu .nav-item .nav-link:not(.cta):hover {
+  color: #1A3B62;
+  transition: all 0.3s ease;
 }
 .site-header .main-navigation .nav-menu .nav-item .nav-link.cta {
-  color: #FFF;
+  color: #ffffff;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -60,6 +65,33 @@ Version: 1.0.0
   padding: 16px 24px;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+.site-header .main-navigation .nav-menu .nav-item .nav-link.cta:hover {
+  background: rgb(15.3064516129, 34.7338709677, 57.6935483871);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .home-page .hero-section {
@@ -84,15 +116,11 @@ Version: 1.0.0
   margin: 0 auto;
 }
 .home-page .hero-section .hero-content .hero-title {
-  color: #FFF;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  color: #ffffff;
   margin-bottom: 48px;
 }
 .home-page .hero-section .hero-content .hero-description {
-  color: #FFF;
+  color: #ffffff;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -104,20 +132,30 @@ Version: 1.0.0
   text-decoration: none;
   border-radius: 16px;
   padding: 16px 24px;
-  color: #FFF;
+  color: #ffffff;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: var(--Title-Medium-Line-Height, 24px); /* 120% */
+  transition: all 0.3s ease;
 }
 .home-page .hero-section .hero-content .btn.btn-primary {
   background-color: #1A3B62;
   color: #ffffff;
 }
+.home-page .hero-section .hero-content .btn.btn-primary:hover {
+  background-color: rgb(15.3064516129, 34.7338709677, 57.6935483871);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
 .home-page .hero-section .hero-content .btn.btn-secondary {
   background-color: #ffffff;
   color: #1A3B62;
   margin-left: 50px;
+}
+.home-page .hero-section .hero-content .btn.btn-secondary:hover {
+  background-color: rgb(229.5, 229.5, 229.5);
+  color: rgb(15.3064516129, 34.7338709677, 57.6935483871);
+  transition: all 0.3s ease;
 }
 .home-page .countdown-section {
   background-color: #ffffff;
@@ -134,7 +172,7 @@ Version: 1.0.0
 .home-page .countdown-section .countdown-label {
   font-size: 48px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: normal;
   margin-bottom: 40px;
   color: #ffffff;
@@ -150,7 +188,6 @@ Version: 1.0.0
   align-items: center;
 }
 .home-page .countdown-section .countdown-timer .countdown-item .countdown-value {
-  font-family: Montserrat, sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -158,8 +195,8 @@ Version: 1.0.0
   color: #ffffff;
 }
 .home-page .trail-section {
-  background: #fff;
-  padding: 64px 162px;
+  background: #ffffff;
+  padding: 64px 162px 128px;
 }
 .home-page .trail-section .trail-content {
   display: flex;
@@ -173,14 +210,8 @@ Version: 1.0.0
   flex: 1;
   min-width: 300px;
 }
-.home-page .trail-section .trail-text h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: #111;
-}
 .home-page .trail-section .trail-text p {
-  color: #555;
+  color: #000000;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -195,7 +226,7 @@ Version: 1.0.0
   align-items: center;
   gap: 0.5rem;
   font-weight: 500;
-  color: #333;
+  color: #000000;
 }
 .home-page .trail-section .trail-text .trail-icons .icon-item svg {
   height: 48px;
@@ -206,24 +237,18 @@ Version: 1.0.0
 }
 .home-page .trail-section .trail-image img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 .home-page .parcours-section {
-  background: #f7f7f7;
-  padding: 5rem 2rem;
+  background: #f8f9fa;
+  padding: 64px 162px;
   text-align: center;
 }
-.home-page .parcours-section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 0.5rem;
-}
 .home-page .parcours-section .subtitle {
-  color: #555;
-  margin-bottom: 3rem;
-  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 6rem;
+  font-size: 20px;
 }
 .home-page .parcours-section .parcours-cards {
   display: grid;
@@ -239,14 +264,14 @@ Version: 1.0.0
 .home-page .parcours-section .parcours-cards .parcours-loader .spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid #f3f3f3;
+  border: 4px solid #f8f9fa;
   border-top: 4px solid #1A3B62;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 1rem;
 }
 .home-page .parcours-section .parcours-cards .parcours-loader p {
-  color: #666;
+  color: #000000;
   font-size: 1.1rem;
 }
 @keyframes spin {
@@ -258,7 +283,7 @@ Version: 1.0.0
   }
 }
 .home-page .parcours-section .parcours-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -284,9 +309,9 @@ Version: 1.0.0
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #1b2a57;
-  color: #fff;
-  font-size: 0.8rem;
+  background: #1A3B62;
+  color: #ffffff;
+  font-size: 1rem;
   padding: 4px 8px;
   border-radius: 9px;
 }
@@ -298,15 +323,10 @@ Version: 1.0.0
   gap: 32px;
 }
 .home-page .parcours-section .parcours-card .card-body h3 {
-  color: #000;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
   margin: 0;
 }
 .home-page .parcours-section .parcours-card .card-body .distance {
-  color: #333;
+  color: #000000;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -320,7 +340,7 @@ Version: 1.0.0
   flex-shrink: 0;
 }
 .home-page .parcours-section .parcours-card .card-body .description {
-  color: #000;
+  color: #000000;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -333,36 +353,25 @@ Version: 1.0.0
 }
 .home-page .parcours-section .parcours-card .card-body .card-footer .price {
   font-weight: 700;
-  color: #111;
+  color: #000000;
 }
 .home-page .parcours-section .parcours-card .card-body .card-footer .cta {
-  color: #1b2a57;
+  color: #000000;
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s;
-}
-.home-page .parcours-section .parcours-card .card-body .card-footer .cta:hover {
-  color: #0f1840;
-  text-decoration: underline;
 }
 .home-page .programme-section {
-  background: #fff;
-  padding: 5rem 2rem;
+  background: #ffffff;
+  padding: 128px 162px 279px;
   text-align: center;
 }
 .home-page .programme-section .container {
   max-width: 900px;
   margin: 0 auto;
 }
-.home-page .programme-section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 0.5rem;
-}
 .home-page .programme-section .subtitle {
-  color: #555;
-  margin-bottom: 3rem;
+  color: #000000;
+  margin-bottom: 10rem;
 }
 .home-page .programme-section .jour {
   margin-bottom: 4rem;
@@ -381,14 +390,9 @@ Version: 1.0.0
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #1b2a57;
-  color: #fff;
+  background: #1A3B62;
+  color: #ffffff;
   font-weight: 700;
-}
-.home-page .programme-section .jour .jour-header h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #111;
 }
 .home-page .programme-section .jour .timeline {
   position: relative;
@@ -404,7 +408,7 @@ Version: 1.0.0
   bottom: 10px;
   width: 3px;
   background: #1A3B62;
-  height: 340px;
+  height: 400px;
 }
 .home-page .programme-section .jour .timeline .event {
   position: relative;
@@ -418,7 +422,7 @@ Version: 1.0.0
   left: -55px;
   top: 10px;
   background: #1A3B62;
-  color: #fff;
+  color: #ffffff;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -432,8 +436,8 @@ Version: 1.0.0
   height: 20px;
 }
 .home-page .programme-section .jour .timeline .event .event-content {
-  background: #1b2a57;
-  color: #fff;
+  background: #1A3B62;
+  color: #ffffff;
   border-radius: 10px;
   padding: 1rem 1.2rem;
   width: 100%;
@@ -442,21 +446,19 @@ Version: 1.0.0
   min-height: 100px;
 }
 .home-page .programme-section .jour .timeline .event .event-content h4 {
-  font-size: 1.05rem;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
 .home-page .programme-section .jour .timeline .event .event-content .horaire {
   display: block;
-  font-size: 0.9rem;
+  font-size: 20px;
   font-weight: 500;
   margin-bottom: 0.6rem;
-  opacity: 0.9;
 }
 .home-page .programme-section .jour .timeline .event .event-content p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #e4e8f2;
+  font-size: 20px;
+  color: #ffffff;
 }
 .home-page .programme-section .jour .timeline .event:last-child {
   margin-bottom: 0;
@@ -483,15 +485,11 @@ Version: 1.0.0
   margin: 0 auto;
 }
 .home-page .rejoindre-aventure .aventure-content .aventure-title {
-  color: #FFF;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  color: #ffffff;
   margin-bottom: 48px;
 }
 .home-page .rejoindre-aventure .aventure-content .aventure-description {
-  color: #FFF;
+  color: #ffffff;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -503,7 +501,7 @@ Version: 1.0.0
   text-decoration: none;
   border-radius: 16px;
   padding: 16px 24px;
-  color: #FFF;
+  color: #ffffff;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -512,6 +510,377 @@ Version: 1.0.0
 .home-page .rejoindre-aventure .aventure-content .btn.btn-primary {
   background-color: #1A3B62;
   color: #ffffff;
+}
+.home-page .rejoindre-aventure .aventure-content .btn.btn-primary:hover {
+  background-color: rgb(15.3064516129, 34.7338709677, 57.6935483871);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.home-page .galerie-section {
+  background: #1A3B62;
+  padding: 128px 162px;
+  text-align: center;
+}
+.home-page .galerie-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.home-page .galerie-section h2 {
+  color: #ffffff;
+}
+.home-page .galerie-section .subtitle {
+  color: #ffffff;
+  margin-bottom: 120px;
+  font-size: 20px;
+}
+.home-page .galerie-section .galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.home-page .galerie-section .galerie-grid .galerie-item {
+  overflow: hidden;
+  border-radius: 16px;
+}
+.home-page .galerie-section .galerie-grid .galerie-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+.home-page .galerie-section .galerie-cta .btn-galerie {
+  background: transparent;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+.home-page .galerie-section .galerie-cta .btn-galerie:hover {
+  color: rgb(229.5, 229.5, 229.5);
+  transition: all 0.3s ease;
+}
+.home-page .inscription-section {
+  background: #ffffff;
+  padding: 128px 162px;
+}
+.home-page .inscription-section .inscription-container {
+  display: flex;
+  gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+.home-page .inscription-section .inscription-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.home-page .inscription-section .inscription-left h1 {
+  margin: 0;
+}
+.home-page .inscription-section .inscription-left .inscription-description {
+  font-size: 20px;
+  margin: 0;
+}
+.home-page .inscription-section .inscription-left .inscription-notice {
+  background: #D9D9D9;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  border-left: 4px solid #1A3B62;
+}
+.home-page .inscription-section .inscription-left .inscription-notice svg {
+  flex-shrink: 0;
+}
+.home-page .inscription-section .inscription-left .inscription-notice .notice-text {
+  font-size: 20px;
+}
+.home-page .inscription-section .inscription-left .inscription-notice .notice-text strong {
+  font-weight: 700;
+}
+.home-page .inscription-section .inscription-left .inscription-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.home-page .inscription-section .inscription-left .inscription-features li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.home-page .inscription-section .inscription-left .inscription-features li svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.home-page .inscription-section .inscription-left .inscription-features li span {
+  font-size: 20px;
+  color: #000000;
+}
+.home-page .inscription-section .inscription-right {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.home-page .inscription-section .inscription-right .wpcf7-form h2 {
+  font-size: 32px;
+  margin: 0 0 30px 0;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group {
+  margin-bottom: 20px;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group label {
+  display: block;
+  margin-bottom: 4px;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group br {
+  display: none;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group input[type=text],
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group input[type=email],
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group input[type=tel],
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group select,
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group .wpcf7-form-control-wrap input,
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group .wpcf7-form-control-wrap select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #000000;
+  background: #ffffff;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group.form-checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group.form-checkbox-group .wpcf7-list-item {
+  margin: 0;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group.form-checkbox-group input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group.form-checkbox-group label {
+  margin: 0;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group.form-checkbox-group label a {
+  color: #1A3B62;
+  text-decoration: underline;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-group.form-checkbox-group .wpcf7-list-item-label {
+  font-size: 14px;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .form-row .form-group.half-width {
+  flex: 1;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .wpcf7-submit {
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #1A3B62;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .wpcf7-submit:hover {
+  background-color: rgb(15.3064516129, 34.7338709677, 57.6935483871);
+  transition: all 0.3s ease;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .wpcf7-not-valid-tip {
+  font-size: 12px;
+  color: #d32f2f;
+  margin-top: 5px;
+}
+.home-page .inscription-section .inscription-right .wpcf7-form .wpcf7-response-output {
+  border-radius: 8px;
+  padding: 12px;
+  margin: 20px 0 0 0;
+}
+.home-page .partenaires-section {
+  padding: 118px 162px;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+.home-page .partenaires-section h2 {
+  text-align: center;
+  margin-bottom: 100px;
+  color: #000000;
+}
+.home-page .partenaires-section .partenaires-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.home-page .partenaires-section .partenaires-carousel::before, .home-page .partenaires-section .partenaires-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.home-page .partenaires-section .partenaires-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.home-page .partenaires-section .partenaires-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.home-page .partenaires-section .partenaires-track {
+  display: flex;
+  gap: 80px;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+.home-page .partenaires-section .partenaire-item {
+  flex-shrink: 0;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.home-page .partenaires-section .partenaire-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.site-footer {
+  background: #1A3B62;
+  padding: 80px 162px 40px;
+  color: #ffffff;
+}
+.site-footer .footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  margin-bottom: 60px;
+}
+.site-footer .footer-column h3 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.site-footer .footer-column p {
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  color: #ffffff;
+  margin: 0;
+}
+.site-footer .footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer .footer-menu li {
+  margin-bottom: 12px;
+}
+.site-footer .footer-menu li a {
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.site-footer .footer-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer .footer-info li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.site-footer .footer-info li svg {
+  flex-shrink: 0;
+}
+.site-footer .footer-info li span {
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  color: #ffffff;
+}
+.site-footer .footer-social {
+  display: flex;
+  gap: 16px;
+}
+.site-footer .footer-social .social-icon {
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.site-footer .footer-social .social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.site-footer .footer-separator {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 auto 30px;
+}
+.site-footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.site-footer .footer-bottom .footer-copyright {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0;
+}
+.site-footer .footer-bottom .footer-legal {
+  display: flex;
+  gap: 30px;
+}
+.site-footer .footer-bottom .footer-legal a {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 * {

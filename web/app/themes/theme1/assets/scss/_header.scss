@@ -1,10 +1,10 @@
 // Variables pour le header
-$white: #ffffff;
+$blanc: #ffffff;
 $bleu: #1A3B62;
 
 // Header principal
 .site-header {
-    background-color: $white;
+    background-color: $blanc;
     position: relative;
 
     .container {
@@ -46,9 +46,15 @@ $bleu: #1A3B62;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
+                    transition: all 0.3s ease;
+
+                    &:not(.cta):hover {
+                        color: $bleu;
+                        transition: all 0.3s ease;
+                    }
                     
                     &.cta {
-                        color: #FFF;
+                        color: $blanc;
                         font-size: 20px;
                         font-style: normal;
                         font-weight: 700;
@@ -60,7 +66,16 @@ $bleu: #1A3B62;
                         padding: 16px 24px;
                         align-items: center;
                         justify-content: center;
+                        transition: all 0.3s ease;
+
                     }
+
+                    &.cta:hover {
+                        background: darken($bleu, 10%);
+                        transition: all 0.3s ease;
+                    }
+
+                
                 }
             }
         }

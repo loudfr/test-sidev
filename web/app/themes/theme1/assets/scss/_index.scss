@@ -1,10 +1,30 @@
 // Variables pour la page d'accueil
 $bleu: #1A3B62;
-$secondary-color: #28a745;
 $noir: #000000;
-$light-bg: #f8f9fa;
-$white: #ffffff;
-$transition: all 0.3s ease;
+$blanc-fonce: #f8f9fa;
+$blanc: #ffffff;
+
+h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
 
 // Page d'accueil
 .home-page {
@@ -13,7 +33,7 @@ $transition: all 0.3s ease;
         border-radius: 0;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), 
                     url('../../imgs/background.svg') lightgray 50% / cover no-repeat;
-        color: $white;
+        color: $blanc;
         width: 100%;
         height: 800px;
         flex-shrink: 0;
@@ -33,16 +53,12 @@ $transition: all 0.3s ease;
             margin: 0 auto;
 
             .hero-title {
-                color: #FFF;
-                font-size: 64px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
+                color: $blanc;
                 margin-bottom: 48px;
             }
 
             .hero-description {
-                color: #FFF;
+                color: $blanc;
                 font-size: 32px;
                 font-style: normal;
                 font-weight: 500;
@@ -55,32 +71,41 @@ $transition: all 0.3s ease;
                 text-decoration: none;
                 border-radius: 16px;
                 padding: 16px 24px;
-
-                color: #FFF;
+                color: $blanc;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: var(--Title-Medium-Line-Height, 24px); /* 120% */
+                transition: all 0.3s ease  ;
 
                 &.btn-primary {
                     background-color: $bleu;
-                    color: $white;
+                    color: $blanc;
+                }
+
+                &.btn-primary:hover {
+                    background-color: darken($bleu, 10%);
+                    color: $blanc;
+                    transition: all 0.3s ease  ;
                 }
 
                 &.btn-secondary {
-                    background-color: $white;
+                    background-color: $blanc;
                     color: $bleu;
                     margin-left: 50px;
                 }
 
-
+                &.btn-secondary:hover {
+                    background-color: darken($blanc, 10%);
+                    color: darken($bleu, 10%);
+                    transition: all 0.3s ease;
+                }
             }
         }
     }
 
     // Section Countdown
     .countdown-section {
-        background-color: $white;
+        background-color: $blanc;
         padding: 64px 162px;
         text-align: center;
 
@@ -95,10 +120,10 @@ $transition: all 0.3s ease;
         .countdown-label {
             font-size: 48px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: 700;
             line-height: normal;
             margin-bottom: 40px;
-            color: $white;
+            color: $blanc;
         }
 
         .countdown-timer {
@@ -112,20 +137,19 @@ $transition: all 0.3s ease;
                 align-items: center;
 
                 .countdown-value {
-                    font-family: Montserrat, sans-serif;
                     font-size: 48px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
-                    color: $white;
+                    color: $blanc;
                 }
             }
         }
     }
 
     .trail-section {
-        background: #fff;
-        padding: 64px 162px;
+        background: $blanc;
+        padding: 64px 162px 128px;
 
         .trail-content {
             display: flex;
@@ -140,36 +164,29 @@ $transition: all 0.3s ease;
             flex: 1;
             min-width: 300px;
 
-            h2 {
-                font-size: 2rem;
-                font-weight: 700;
-                margin-bottom: 2rem;
-                color: #111;
-            }
-
             p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1rem;
+                color: $noir;
+                line-height: 1.6;
+                margin-bottom: 1rem;
             }
 
             .trail-icons {
-            display: flex;
-            gap: 32px 64px;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-
-            .icon-item {
                 display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                font-weight: 500;
-                color: #333;
+                gap: 32px 64px;
+                margin-top: 1.5rem;
+                flex-wrap: wrap;
 
-                svg {
-                    height: 48px;
+                .icon-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-weight: 500;
+                    color: $noir;
+
+                    svg {
+                        height: 48px;
+                    }
                 }
-            }
             }
         }
 
@@ -178,83 +195,75 @@ $transition: all 0.3s ease;
             min-width: 280px;
 
             img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                border-radius: 16px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             }
         }
     }
-
 
     .parcours-section {
-    background: #f7f7f7;
-    padding: 5rem 2rem;
-    text-align: center;
+        background: $blanc-fonce;
+        padding: 64px 162px;
+        text-align: center;
 
-    h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #111;
-        margin-bottom: 0.5rem;
-    }
+        .subtitle {
+            color: $noir;
+            margin-bottom: 6rem;
+            font-size: 20px;
+        }
 
-    .subtitle {
-        color: #555;
-        margin-bottom: 3rem;
-        font-size: 1rem;
-    }
-
-    .parcours-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        justify-items: center;
-        
-        .parcours-loader {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 3rem;
+        .parcours-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            justify-items: center;
             
-            .spinner {
-                width: 50px;
-                height: 50px;
-                border: 4px solid #f3f3f3;
-                border-top: 4px solid $bleu;
-                border-radius: 50%;
-                animation: spin 1s linear infinite;
-                margin: 0 auto 1rem;
-            }
-            
-            p {
-                color: #666;
-                font-size: 1.1rem;
+            .parcours-loader {
+                grid-column: 1 / -1;
+                text-align: center;
+                padding: 3rem;
+                
+                .spinner {
+                    width: 50px;
+                    height: 50px;
+                    border: 4px solid $blanc-fonce;
+                    border-top: 4px solid $bleu;
+                    border-radius: 50%;
+                    animation: spin 1s linear infinite;
+                    margin: 0 auto 1rem;
+                }
+                
+                p {
+                    color: $noir;
+                    font-size: 1.1rem;
+                }
             }
         }
-    }
-    
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-    .parcours-card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        width: 100%;
-        max-width: 340px;
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .parcours-card {
+            background: $blanc;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 340px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
 
             &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             }
 
             .card-image {
-            position: relative;
+                position: relative;
 
                 img {
                     width: 100%;
@@ -266,9 +275,9 @@ $transition: all 0.3s ease;
                     position: absolute;
                     top: 10px;
                     right: 10px;
-                    background: #1b2a57;
-                    color: #fff;
-                    font-size: 0.8rem;
+                    background: $bleu;
+                    color: $blanc;
+                    font-size: 1rem;
                     padding: 4px 8px;
                     border-radius: 9px;
                 }
@@ -282,16 +291,11 @@ $transition: all 0.3s ease;
                 gap: 32px;
 
                 h3 {
-                    color: #000;
-                    font-size: 32px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
                     margin: 0;
                 }
 
                 .distance {
-                    color: #333;
+                    color: $noir;
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 500;
@@ -307,8 +311,7 @@ $transition: all 0.3s ease;
                 }
 
                 .description {
-                    color: #000;
-                    // font-size: 20px;
+                    color: $noir;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
@@ -322,30 +325,22 @@ $transition: all 0.3s ease;
 
                     .price {
                         font-weight: 700;
-                        color: #111;
+                        color: $noir;
                     }
 
                     .cta {
-                        color: #1b2a57;
+                        color: $noir;
                         font-weight: 600;
                         text-decoration: none;
-                        transition: color 0.3s;
-
-
-                        &:hover {
-                            color: #0f1840;
-                            text-decoration: underline;
-                        }
                     }
                 }
             }
         }
     }
 
-    
     .programme-section {
-        background: #fff;
-        padding: 5rem 2rem;
+        background: $blanc;
+        padding: 128px 162px 279px;
         text-align: center;
 
         .container {
@@ -353,16 +348,9 @@ $transition: all 0.3s ease;
             margin: 0 auto;
         }
 
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #111;
-            margin-bottom: 0.5rem;
-        }
-
         .subtitle {
-            color: #555;
-            margin-bottom: 3rem;
+            color: $noir;
+            margin-bottom: 10rem;
         }
 
         .jour {
@@ -382,15 +370,9 @@ $transition: all 0.3s ease;
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;
-                    background: #1b2a57;
-                    color: #fff;
+                    background: $bleu;
+                    color: $blanc;
                     font-weight: 700;
-                }
-
-                h3 {
-                    font-size: 1.3rem;
-                    font-weight: 600;
-                    color: #111;
                 }
             }
 
@@ -400,7 +382,6 @@ $transition: all 0.3s ease;
                 max-width: 700px;
                 margin: 0 auto;
                 
-                // Ligne verticale bleue à gauche
                 &::before {
                     content: '';
                     position: absolute;
@@ -409,7 +390,7 @@ $transition: all 0.3s ease;
                     bottom: 10px;
                     width: 3px;
                     background: $bleu;
-                    height: 340px;
+                    height: 400px;
                 }
 
                 .event {
@@ -424,7 +405,7 @@ $transition: all 0.3s ease;
                         left: -55px;
                         top: 10px;
                         background: $bleu;
-                        color: #fff;
+                        color: $blanc;
                         width: 40px;
                         height: 40px;
                         border-radius: 50%;
@@ -440,8 +421,8 @@ $transition: all 0.3s ease;
                     }
 
                     .event-content {
-                        background: #1b2a57;
-                        color: #fff;
+                        background: $bleu;
+                        color: $blanc;
                         border-radius: 10px;
                         padding: 1rem 1.2rem;
                         width: 100%;
@@ -450,23 +431,21 @@ $transition: all 0.3s ease;
                         min-height: 100px;
 
                         h4 {
-                            font-size: 1.05rem;
+                            font-size: 24px;
                             font-weight: 600;
                             margin-bottom: 0.4rem;
                         }
 
                         .horaire {
                             display: block;
-                            font-size: 0.9rem;
+                            font-size: 20px;
                             font-weight: 500;
                             margin-bottom: 0.6rem;
-                            opacity: 0.9;
                         }
 
                         p {
-                            font-size: 0.9rem;
-                            line-height: 1.5;
-                            color: #e4e8f2;
+                            font-size: 20px;
+                            color: $blanc;
                         }
                     }
                 }
@@ -482,7 +461,7 @@ $transition: all 0.3s ease;
         border-radius: 0;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), 
                     url('../../imgs/bg-2.png') lightgray 50% / cover no-repeat;
-        color: $white;
+        color: $blanc;
         width: 100%;
         height: 600px;
         flex-shrink: 0;
@@ -502,16 +481,12 @@ $transition: all 0.3s ease;
             margin: 0 auto;
 
             .aventure-title {
-                color: #FFF;
-                font-size: 48px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
+                color: $blanc;
                 margin-bottom: 48px;
             }
 
             .aventure-description {
-                color: #FFF;
+                color: $blanc;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
@@ -525,7 +500,7 @@ $transition: all 0.3s ease;
                 border-radius: 16px;
                 padding: 16px 24px;
 
-                color: #FFF;
+                color: $blanc;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 700;
@@ -533,29 +508,337 @@ $transition: all 0.3s ease;
 
                 &.btn-primary {
                     background-color: $bleu;
-                    color: $white;
+                    color: $blanc;
                 }
 
-
+                &.btn-primary:hover {
+                    background-color: darken($bleu, 10%);
+                    color: $blanc;
+                    transition: all 0.3s ease;
+                }
             }
         }
     }
 
+    .galerie-section {
+        background: $bleu;
+        padding: 128px 162px;
+        text-align: center;
 
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: $blanc;
+        }
+
+        .subtitle {
+            color: $blanc;
+            margin-bottom: 120px;
+            font-size: 20px;
+        }
+
+        .galerie-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+
+            .galerie-item {
+                overflow: hidden;
+                border-radius: 16px;
+
+                img {
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+        }
+
+        .galerie-cta {
+            .btn-galerie {
+                background: transparent;
+                color: $blanc;
+                font-size: 24px;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: darken($blanc, 10%);
+                    transition: all 0.3s ease;
+                }
+            }
+
+        }
+    }
+
+    .inscription-section {
+        background: $blanc;
+        padding: 128px 162px;
+
+        .inscription-container {
+            display: flex;
+            gap: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inscription-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            h1 {
+                margin: 0;
+            }
+
+            .inscription-description {
+                font-size: 20px;
+                margin: 0;
+            }
+
+            .inscription-notice {
+                background: #D9D9D9;
+                padding: 20px;
+                display: flex;
+                gap: 15px;
+                align-items: flex-start;
+                border-left: 4px solid #1A3B62;
+
+                svg {
+                    flex-shrink: 0;
+                }
+
+                .notice-text {
+                    font-size: 20px;
+
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .inscription-features {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        flex-shrink: 0;
+                    }
+
+                    span {
+                        font-size: 20px;
+                        color: $noir;
+                    }
+                }
+            }
+        }
+
+        .inscription-right {
+            flex: 1;
+            background: $blanc-fonce;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+            // Styles pour Contact Form 7
+            .wpcf7-form {
+                h2 {
+                    font-size: 32px;
+                    margin: 0 0 30px 0;
+                }
+
+                .form-group {
+                    margin-bottom: 20px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 4px;
+                    }
+
+                    // Supprimer le <br> automatique de Contact Form 7
+                    br {
+                        display: none;
+                    }
+
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="tel"],
+                    select,
+                    .wpcf7-form-control-wrap input,
+                    .wpcf7-form-control-wrap select {
+                        width: 100%;
+                        padding: 12px 16px;
+                        border-radius: 12px;
+                        border: 1px solid $noir;
+                        background: $blanc;
+                        // box-sizing: border-box;
+                    }
+
+
+                    &.form-checkbox-group {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 10px;
+
+                        .wpcf7-list-item {
+                            margin: 0;
+                        }
+
+                        input[type="checkbox"] {
+                            width: 18px;
+                            height: 18px;
+                            cursor: pointer;
+                        }
+
+                        label {
+                            margin: 0;
+
+                            a {
+                                color: $bleu;
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .wpcf7-list-item-label {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .form-row {
+                    display: flex;
+                    gap: 20px;
+                    margin-bottom: 20px;
+
+                    .form-group {
+                        flex: 1;
+                        margin-bottom: 0;
+
+                        &.half-width {
+                            flex: 1;
+                        }
+                    }
+                }
+
+                .wpcf7-submit {
+                    width: 100%;
+                    padding: 16px 24px;
+                    background-color: $bleu;
+                    color: $blanc;
+                    border: none;
+                    border-radius: 12px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    margin-top: 10px;
+
+                    &:hover {
+                        background-color: darken($bleu, 10%);
+                        transition: all 0.3s ease;
+                    }
+                }
+
+                .wpcf7-not-valid-tip {
+                    font-size: 12px;
+                    color: #d32f2f;
+                    margin-top: 5px;
+                }
+
+                .wpcf7-response-output {
+                    border-radius: 8px;
+                    padding: 12px;
+                    margin: 20px 0 0 0;
+                }
+            }
+        }
+    }
+
+    // Section Partenaires
+    .partenaires-section {
+        padding: 118px 162px;
+        background: $blanc-fonce;
+        overflow: hidden;
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 100px;
+            color: $noir;
+        }
+        
+        .partenaires-carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            
+            // Dégradés sur les bords pour effet de fondu
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 100px;
+                height: 100%;
+                z-index: 2;
+                pointer-events: none;
+            }
+            
+            &::before {
+                left: 0;
+                background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            }
+            
+            &::after {
+                right: 0;
+                background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            }
+        }
+        
+        .partenaires-track {
+            display: flex;
+            gap: 80px;
+            will-change: transform;
+            transition: transform 0.1s linear;
+        }
+        
+        .partenaire-item {
+            flex-shrink: 0;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: $blanc;
+            cursor: pointer;
+            
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
 }
-
-// Reset global
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-    color: $noir;
-}
-
-
-

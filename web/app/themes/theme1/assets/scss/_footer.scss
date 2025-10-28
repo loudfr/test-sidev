@@ -1,0 +1,135 @@
+// Variables
+$bleu: #1A3B62;
+$white: #ffffff;
+
+// Footer
+.site-footer {
+    background: $bleu;
+    padding: 80px 162px 40px;
+    color: $white;
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+        margin-bottom: 60px;
+    }
+
+    .footer-column {
+        h3 {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 20px;
+            color: $white;
+        }
+
+        p {
+            font-size: 16px;
+            font-style: normal;
+            line-height: normal;
+            color: $white;
+            margin: 0;
+        }
+    }
+
+    // Menu
+    .footer-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 12px;
+
+            a {
+                font-size: 16px;
+                font-style: normal;
+                line-height: normal;
+                color: $white;
+                text-decoration: none;
+                transition: opacity 0.3s ease;
+            }
+        }
+    }
+
+    // Informations
+    .footer-info {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+
+            svg {
+                flex-shrink: 0;
+            }
+
+            span {
+                font-size: 16px;
+                font-style: normal;
+                line-height: normal;
+                color: $white;
+            }
+        }
+    }
+
+    // Réseaux sociaux
+    .footer-social {
+        display: flex;
+        gap: 16px;
+
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            background: $white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    // Ligne de séparation
+    .footer-separator {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.3);
+        margin: 0 auto 30px;
+    }
+
+    // Bas du footer
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        .footer-copyright {
+            font-size: 14px;
+            color: $white;
+            margin: 0;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 30px;
+
+            a {
+                font-size: 14px;
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}
